@@ -83,7 +83,7 @@ MNVIC_I2C3_EV               ,
 MNVIC_I2C3_ER           = 73,
 MNVIC_FPU               = 81,
 MNVIC_SPI4              = 84,
-}MNVIC_INTPosition_VectorTable_t
+}MNVIC_INTPosition_VectorTable_t;
 
 typedef enum
 {

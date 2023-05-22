@@ -41,7 +41,7 @@
                                                (((_IntIndex_)<(MNVIC_DMA1_Stream7))||((_IntIndex_)>(MNVIC_SDIO)))&&\
                                                (((_IntIndex_)<(MNVIC_SPI3))        ||((_IntIndex_)>(MNVIC_DMA2_Stream0)))&&\
                                                (((_IntIndex_)<(MNVIC_DMA2_Stream4))||((_IntIndex_)>(MNVIC_OTG_FS)))||\
-                                               (( _IntIndex_)==(MNVIC_FPU))        ||((_IntIndex_)>(MNVIC_SPI4))
+                                               (( _IntIndex_)==(MNVIC_FPU))        ||((_IntIndex_)>(MNVIC_SPI4)))
 /******************************************************************************/
 /*                         Macros of NVIC Register Map                        */
 /******************************************************************************/
