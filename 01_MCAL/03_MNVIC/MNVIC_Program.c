@@ -42,7 +42,7 @@ static MNVIC_SysPriority_t GLB_uddtSysPriority ;
 ES_t MNVIC_errInitSoftwareSystemPriority(MNVIC_SysPriority_t Copy_uddtPriorityOption)
 {
 	ES_t LOC_uddtState = ES_OK;
-	if((u8)Copy_u8IntIndex < MNVIC_INVALID_Priority)
+	if((u8)Copy_uddtPriorityOption < MNVIC_INVALID_Priority)
 	{
 	GLB_uddtSysPriority  = Copy_uddtPriorityOption ;
 	MSCB_AIRCR = VECTKEY |((u32)GLB_uddtSysPriority << 8);
