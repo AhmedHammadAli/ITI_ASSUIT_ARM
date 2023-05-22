@@ -57,7 +57,7 @@ ES_t MNVIC_errInitSoftwareSystemPriority(MNVIC_SysPriority_t Copy_uddtPriorityOp
 ES_t MNVIC_errEnablePerInterrupt(u8 Copy_u8IntIndex)
 {
 	ES_t LOC_uddtState = ES_OK;
-	if(Copy_u8IntIndex < BITS_PER_INT_MASK)
+	if( Is_Valid_Intrrupt_Number(Copy_u8IntIndex))
 	{
 		MNVIC->ISER[Copy_u8IntIndex / 32]  = (1U << (Copy_u8IntIndex %32) )  ;
 	}
@@ -71,7 +71,7 @@ ES_t MNVIC_errEnablePerInterrupt(u8 Copy_u8IntIndex)
 ES_t MNVIC_errDisablePerInterrupt(u8 Copy_u8IntIndex)
 {
 	ES_t LOC_uddtState = ES_OK;
-	if(Copy_u8IntIndex < BITS_PER_INT_MASK)
+	if(Is_Valid_Intrrupt_Number(Copy_u8IntIndex))
 	{
 		MNVIC->ICER[Copy_u8IntIndex / 32]  = (1U << (Copy_u8IntIndex %32) )  ;
 	}
@@ -84,7 +84,7 @@ ES_t MNVIC_errDisablePerInterrupt(u8 Copy_u8IntIndex)
 ES_t MNVIC_errSetPendingInterrupt(u8 Copy_u8IntIndex)
 {
 	ES_t LOC_uddtState = ES_OK;
-	if(Copy_u8IntIndex < BITS_PER_INT_MASK)
+	if(Is_Valid_Intrrupt_Number(Copy_u8IntIndex))
 	{
 		MNVIC->ISPR[Copy_u8IntIndex / 32]  = (1U << (Copy_u8IntIndex %32) )  ;
 	}
@@ -97,7 +97,7 @@ ES_t MNVIC_errSetPendingInterrupt(u8 Copy_u8IntIndex)
 ES_t MNVIC_errClearPeningInterrupt(u8 Copy_u8IntIndex)
 {
 	ES_t LOC_uddtState = ES_OK;
-	if(Copy_u8IntIndex < BITS_PER_INT_MASK)
+	if(Is_Valid_Intrrupt_Number(Copy_u8IntIndex))
 	{
 		MNVIC->ICPR[Copy_u8IntIndex / 32]  = (1U << (Copy_u8IntIndex %32) )  ;
 	}

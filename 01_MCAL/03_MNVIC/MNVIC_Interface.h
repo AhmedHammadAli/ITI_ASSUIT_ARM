@@ -21,8 +21,69 @@
 #ifndef MNVIC_INTERFACE_H_
 #define MNVIC_INTERFACE_H_
 
+/**************************************************************************/
+/*               INTERRUPT PSITION NUMBER ON VECTOR TABLE                 */
+/**************************************************************************/
+typedef enum 
+{
 
-
+MNVIC_WWDG              = 00,
+MNVIC_EXTI16_PVD            ,
+MNVIC_EXTI21_TAMP_STAMP     ,
+MNVIC_EXTI22_RTC_WKUP       ,
+MNVIC_FLASH                 ,
+MNVIC_RCC                   ,
+MNVIC_EXTI0                 ,
+MNVIC_EXTI1                 ,
+MNVIC_EXTI2                 ,
+MNVIC_EXTI3                 ,
+MNVIC_EXTI4                 ,
+MNVIC_DMA1_Stream0          ,
+MNVIC_DMA1_Stream1          ,
+MNVIC_DMA1_Stream2          ,
+MNVIC_DMA1_Stream3          ,
+MNVIC_DMA1_Stream4          ,
+MNVIC_DMA1_Stream5          ,
+MNVIC_DMA1_Stream6          ,
+MNVIC_ADC               = 18,
+MNVIC_EXTI9_5           = 23,
+MNVIC_TIM1_BRK_TIM9         ,
+MNVIC_TIM1_UP_TIM10         ,
+MNVIC_TIM1_TRG_COM_TIM1     ,
+MNVIC_TIM1_CC               ,
+MNVIC_TIM2                  ,
+MNVIC_TIM3                  ,
+MNVIC_TIM4                  ,
+MNVIC_I2C1_EV               ,
+MNVIC_I2C1_ER               ,
+MNVIC_I2C2_EV               ,
+MNVIC_I2C2_ER               ,
+MNVIC_SPI1                  ,
+MNVIC_SPI2                  ,
+MNVIC_USART1                ,
+MNVIC_USART2            = 38,
+MNVIC_EXTI15_10         = 40,
+MNVIC_EXTI17_RTC_Alarm      ,
+MNVIC_EXTI18_OTG_FS_WKU     ,
+MNVIC_DMA1_Stream7      = 47,
+MNVIC_SDIO              = 49,
+MNVIC_TIM5                  ,
+MNVIC_SPI3              = 51,
+MNVIC_DMA2_Stream0      = 56,
+MNVIC_DMA2_Stream1          ,
+MNVIC_DMA2_Stream2          ,
+MNVIC_DMA2_Stream3          ,
+MNVIC_DMA2_Stream4      = 60,
+MNVIC_OTG_FS            = 67,
+MNVIC_DMA2_Stream5          ,
+MNVIC_DMA2_Stream6          ,
+MNVIC_DMA2_Stream7          ,
+MNVIC_USART6                ,
+MNVIC_I2C3_EV               ,
+MNVIC_I2C3_ER           = 73,
+MNVIC_FPU               = 81,
+MNVIC_SPI4              = 84,
+}MNVIC_INTPosition_VectorTable_t
 
 typedef enum
 {
