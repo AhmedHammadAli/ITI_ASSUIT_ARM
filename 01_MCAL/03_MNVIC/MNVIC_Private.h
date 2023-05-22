@@ -31,7 +31,7 @@
 /******************************************************************************/
 /*                             MGPIO   BIT- MASK                              */
 /******************************************************************************/
-#define  BITS_PER_INT                      240U
+#define  BITS_PER_INT_MASK                      85U
 
 /******************************************************************************/
 /*                         Macros of NVIC Register Map                         */
@@ -99,13 +99,13 @@ typedef struct
 #define  BASE_OFFSET                                             0x4
 typedef enum
 {
-	ISER =0x0 ,
+	ISER=0x0  ,
 	ICER=0x180,
 	ISPR=0x200,
 	ICPR=0x280,
 	IABR=0x300,
-	IPR   =0x400,
-	STIR  =0xE00
+	IPR =0x400,
+	STIR=0xE00
 } NVIC_OFFSECTs_Reg_t ;
 /*******************************************************YOU CAN USE ******************************************/
 #define   NVIC_REG( _NVIC_OFFSECTs_Reg_t_  , _REG_NUMBER_ )         (  *( (volatile u32*)( (NVIC_ISER0_BASE_Address)+( (_NVIC_OFFSECTs_Reg_t_) +( (_REG_NUMBER_)*(BASE_OFFSET) ) ) )) )
@@ -116,9 +116,9 @@ typedef enum
 #define   NVIC_ISPR(  _REG_NUMBER_  )         (  *( (volatile u32*)( (NVIC_ISER0_BASE_Address)+( (ISPR) +( (_REG_NUMBER_)*(BASE_OFFSET) ) ) )) )
 #define   NVIC_ICPR(  _REG_NUMBER_  )         (  *( (volatile u32*)( (NVIC_ISER0_BASE_Address)+( (ICPR) +( (_REG_NUMBER_)*(BASE_OFFSET) ) ) )) )
 #define   NVIC_IABR(  _REG_NUMBER_  )         (  *( (volatile u32*)( (NVIC_ISER0_BASE_Address)+( (IABR) +( (_REG_NUMBER_)*(BASE_OFFSET) ) ) )) )
-#define   NVIC_IPR(  _REG_NUMBER_  )            (  *( (volatile u32*)( (NVIC_ISER0_BASE_Address)+( (IPR)   +( (_REG_NUMBER_)*(BASE_OFFSET) ) ) )) )
+#define   NVIC_IPR(  _REG_NUMBER_  )          (  *( (volatile u32*)( (NVIC_ISER0_BASE_Address)+( (IPR)   +( (_REG_NUMBER_)*(BASE_OFFSET) ) ) )) )
 
-#define   NVIC_STIR                                          (  *( (volatile u32*)( (NVIC_ISER0_BASE_Address)+ (STIR)  ) ) )
+#define   NVIC_STIR                           (  *( (volatile u32*)( (NVIC_ISER0_BASE_Address)+ (STIR)  ) ) )
 
 #endif
 #endif /* MNVIC_PRIVATE_H_ */
